@@ -1,0 +1,2 @@
+include setup.py LICENSE.txt MANIFEST.in *.rst
+recursive-include docs *
