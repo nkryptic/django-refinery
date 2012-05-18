@@ -1,21 +1,32 @@
 django-refinery
 ===============
 
-The django-refinery project is a reusable Django_ application allowing
-users to dynamically filter and refine a Model queryset.  It requires
-Python 2.5 or higher.
+Allows users to filter down a queryset based on a model's fields, similar to
+the Django admin's ``list_filter`` interface.  A ``FilterTool`` helper class
+is provided, which will (by default) map filters to model fields and create
+a form for queryset manipulation.  The helper class supports an interface 
+which will feel familiar to anyone who's used a Django ``ModelForm``.
 
-Django-refinery can be used for generating interfaces similar to the Django
-admin's ``list_filter`` interface.  It has an API very similar to Django's
-``ModelForms``.  For example if you had a Product model you could create
-a ``FilterTool`` for it with the code::
+:Author: `Jacob Radford`_
+:Licence: BSD
+:Development Status: |travis-ci-status|
+
+.. _`Jacob Radford`: https://github.com/nkryptic
+.. |travis-ci-status| image:: https://secure.travis-ci.org/nkryptic/django-refinery.png?branch=master
+                      :target: http://travis-ci.org/nkryptic/django-refinery
+
+
+Example usage
+-------------
+
+Given a ``Product`` model you could create a ``FilterTool`` for it with::
 
     import refinery
     
     class ProductFilterTool(refinery.FilterTool):
         class Meta:
             model = Product
-            fields = ['name', 'price', 'manufacturer']
+            fields = ['name', 'price']
 
 And then in your view you could do::
 
@@ -24,18 +35,82 @@ And then in your view you could do::
         return render_to_response('product/product_list.html',
             {'filtertool': filtertool})
 
-The documentation can be found in the ``docs`` directory or `read online`_.
-The source code and issue tracker are generously `hosted by GitHub`_.
+And then in your template::
+
+    <form action="" method="get">
+        {{ filtertool.form.as_p }}
+        <input type="submit" />
+    </form>
+    <h2>Products</h2>
+    <ul>
+      {% for obj in filtertool %}
+          <li>{{ obj.name }} - ${{ obj.price }}</li>
+      {% endfor %}
+    </ul>
+
+For more complex usage or custom needs, refer to the project documentation.
+
+Requirements
+------------
+
+* Python 2.5+
+* Django 1.2+
+
+
+Installation
+------------
+
+* ``pip install -U django-refinery``
+* Add ``refinery`` to your ``INSTALLED_APPS``
+
+
+Documentation
+-------------
+
+See the ``docs`` folder or `read it on readthedocs`_ for expanded
+information on::
+
+* Usage examples
+* Contributing
+* Integration with other apps
+* Project background
+* Low-level API
+* Creating custom filters
+
+.. _`read it on readthedocs`: http://django-refinery.rtfd.org
+
+
+Bugs
+----
 
 If you want to help out with the development of django-refinery, by
 posting detailed bug reports, proposing new features, or suggesting
 documentation improvements, use the `issue tracker`_.  If you want to
-get your hands dirty, great!  Clone the repository, make changes and
-send a pull request.  Please do create an issue to discuss your plans.
+fix it yourself, thank you!  `Fork the project`_, make changes and
+`send a pull request`_.  Please do create an issue to discuss your plans.
 
-.. _`Django`: http://www.djangoproject.com/
-.. _`read online`: http://django-refinery.rtfd.org
-.. _`hosted by GitHub`: http://github.com/nkryptic/django-refinery
-.. _`issue tracker`: http://github.com/nkryptic/django-refinery/issues
+.. `issue tracker`_: http://github.com/nkryptic/django-refinery/issues
+.. _`Fork the project`: http://help.github.com/fork-a-repo
+.. _`send a pull request`: http://help.github.com/send-pull-requests/
+
+
+Background
+----------
+
+Django-refinery is based on `django-filter`_, an application created
+by `Alex Gaynor`_.  For a complete project history and list of contributors,
+see the `django-refinery documentation <http://django-refinery.rtfd.org>`_.
+
+.. _`django-filter`: https://github.com/alex/django-filter
+.. _`Alex Gaynor`: https://github.com/alex
+
+Resources
+---------
+
+* `Documentation <http://django-refinery.rtfd.org/>`_
+* `Bug Tracker <http://github.com/nkryptic/django-refinery/issues>`_
+* `Code <http://github.com/nkryptic/django-refinery>`_
+* `Continuous Integration <http://travis-ci.org/nkryptic/django-refinery>`_
+
 
 

@@ -19,7 +19,6 @@ visit http://github.com/nkryptic/django-refinery/contributors
 Additional concepts were integrated from:
 
 * `django-qfilters`_ project by `Steve Yeago`_
-
 * `Alisue`_
 * `Stephan Jaekel`_
 * `Marke Wywial`_ via `I-DOTCOM LLC`_

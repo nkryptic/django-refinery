@@ -10,7 +10,7 @@ except ImportError:
 from setuptools import setup, find_packages
 
 tests_require = [
-    'Django>=1.3.1,<1.5',
+    'Django>=1.2,<1.5',
     'nose',
     'django-nose',
     'flexmock',

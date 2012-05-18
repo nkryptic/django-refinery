@@ -103,9 +103,10 @@ argument.
 The django.form Widget class which will represent the ``Filter``.  In addition
 to the widgets that are included with Django that you can use there are
 additional ones that django-filte provides which may be useful:
-    * ``refinery.widgets.LinkWidget`` -- this displays the options in a
-      mannner similar to the way the Django Admin does, as a series of links.
-      The link for the selected option will have ``class="selected"``.
+
+* ``refinery.widgets.LinkWidget`` -- this displays the options in a
+  mannner similar to the way the Django Admin does, as a series of links.
+  The link for the selected option will have ``class="selected"``.
 
 ``action``
 ~~~~~~~~~~
