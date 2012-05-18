@@ -3,7 +3,7 @@ django-refinery
 
 The django-refinery project is a reusable Django_ application allowing
 users to dynamically filter and refine a Model queryset.  It requires
-Python 2.4 or higher.
+Python 2.5 or higher.
 
 Django-refinery can be used for generating interfaces similar to the Django
 admin's ``list_filter`` interface.  It has an API very similar to Django's

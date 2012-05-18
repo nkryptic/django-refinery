@@ -1,17 +1,17 @@
 import datetime
 import os
 from django.conf import settings
-from django.test import TestCase
 from django.db.models import Q
 from django import forms
 import refinery
 from refinery import FilterTool
 from refinery.widgets import LinkWidget
+from .base import RefineryTestCase
 from .models import User, Comment, Book, Restaurant, Article
 from .models import STATUS_CHOICES, STATUS_CHOICES_NONE
 
 
-class GenericViewTests(TestCase):
+class GenericViewTests(RefineryTestCase):
     urls = 'tests.urls'
     fixtures = ['test_data']
     template_dirs = [
@@ -31,7 +31,7 @@ class GenericViewTests(TestCase):
             self.assertContains(response, b)
 
 
-class InheritanceTest(TestCase):
+class InheritanceTest(RefineryTestCase):
     def test_inheritance(self):
         class F(refinery.FilterTool):
             class Meta:
@@ -42,7 +42,7 @@ class InheritanceTest(TestCase):
         self.assertEqual(set(F.base_filters), set(G.base_filters))
 
 
-class ModelInheritanceTest(TestCase):
+class ModelInheritanceTest(RefineryTestCase):
     def test_abstract(self):
         class F(refinery.FilterTool):
             class Meta:
@@ -58,7 +58,7 @@ class ModelInheritanceTest(TestCase):
         self.assertEquals(set(F.base_filters), set(['name', 'serves_pizza']))
 
 
-class DateRangeFilterTest(TestCase):
+class DateRangeFilterTest(RefineryTestCase):
     def test_filter(self):
         a = Article.objects.create(published=datetime.datetime.today())
         class F(refinery.FilterTool):
@@ -69,7 +69,7 @@ class DateRangeFilterTest(TestCase):
         self.assertEqual(list(f), [a])
 
 
-class FilterToolForm(TestCase):
+class FilterToolForm(RefineryTestCase):
     def test_prefix(self):
         class F(refinery.FilterTool):
             class Meta:
@@ -78,7 +78,7 @@ class FilterToolForm(TestCase):
         self.assert_('blah-prefix' in unicode(F(prefix='blah-prefix').form))
 
 
-class AllValuesFilterTest(TestCase):
+class AllValuesFilterTest(RefineryTestCase):
     fixtures = ['test_data']
     
     def test_filter(self):
@@ -98,7 +98,7 @@ class AllValuesFilterTest(TestCase):
         self.assertEqual(list(F({'username': 'jose'})), list(User.objects.all()))
 
 
-class InitialValueTest(TestCase):
+class InitialValueTest(RefineryTestCase):
     fixtures = ['test_data']
     
     def test_initial(self):
@@ -111,7 +111,7 @@ class InitialValueTest(TestCase):
         self.assertEqual(list(F({'status': 0})), list(User.objects.filter(status=0)))
 
 
-class RelatedObjectTest(TestCase):
+class RelatedObjectTest(RefineryTestCase):
     fixtures = ['test_data']
     
     def test_foreignkey(self):
@@ -140,7 +140,7 @@ class RelatedObjectTest(TestCase):
         self.assertEqual(str(F().form), form_html)
 
 
-class MultipleChoiceFilterTest(TestCase):
+class MultipleChoiceFilterTest(RefineryTestCase):
     fixtures = ['test_data']
     
     def test_all_choices_selected(self):
@@ -152,7 +152,7 @@ class MultipleChoiceFilterTest(TestCase):
         self.assertEqual(list(F({"status": [0, 1]}).qs), list(User.objects.all()))
 
 
-class MultipleLookupTypesTest(TestCase):
+class MultipleLookupTypesTest(RefineryTestCase):
     fixtures = ['test_data']
     
     def test_no_GET_params(self):
@@ -165,7 +165,7 @@ class MultipleLookupTypesTest(TestCase):
         self.assertEqual(list(F({}).qs), list(Article.objects.all()))
 
 
-class FilterToolTestCase(TestCase):
+class FilterToolTestCase(RefineryTestCase):
     fixtures = ['test_data']
     
     def setUp(self):
