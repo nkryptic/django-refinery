@@ -21,6 +21,7 @@ setup(
         'Programming Language :: Python',
         'Framework :: Django',
     ],
+    keywords=['django', 'refine', 'filter', 'models', 'querysets', 'forms'],
     license='BSD',
     author='Jacob Radford',
     author_email='nkryptic@gmail.com',

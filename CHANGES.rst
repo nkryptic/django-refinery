@@ -52,3 +52,4 @@ Version 0.1 (Unreleased)
 .. _`Tino de Bruijn`: https://github.com/tino
 .. _`Richard Barran`: https://github.com/richardbarran
 .. _`Maurizio Melani`: https://github.com/gislab
+.. _`django-pagination`: https://github.com/ericflo/django-pagination
