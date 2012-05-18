@@ -1,5 +1,6 @@
-import datetime
+from __future__ import with_statement
 import os
+import datetime
 from django.conf import settings
 from django.db.models import Q
 from django import forms
