@@ -1,11 +1,8 @@
 #!/usr/bin/env python
-import os
 import sys
 from optparse import OptionParser
 from django.conf import settings
 
-# parent = os.path.dirname(os.path.abspath(__file__))
-# sys.path.insert(0, parent)
 
 if not settings.configured:
     settings.configure(**{
@@ -16,9 +13,7 @@ if not settings.configured:
             },
         },
         'INSTALLED_APPS': [
-            # 'django.contrib.auth',
             'django.contrib.contenttypes',
-            # 'django_nose',
             'refinery',
             # 'south',
             'tests',
@@ -33,8 +28,6 @@ from django_nose import NoseTestSuiteRunner
 
 
 def runtests(*test_args, **kwargs):
-    
-    
     if 'south' in settings.INSTALLED_APPS:
         from south.management.commands import patch_for_test_db_setup
         patch_for_test_db_setup()
