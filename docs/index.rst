@@ -10,10 +10,12 @@ Contents:
 
 .. toctree::
     :maxdepth: 1
-
+    
     install
     usage
     integration
     ref/filters
     ref/widgets
     tests
+    history
+

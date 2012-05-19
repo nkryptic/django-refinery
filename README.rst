@@ -103,6 +103,23 @@ see the project documentation.
 .. _`django-filter`: https://github.com/alex/django-filter
 .. _`Alex Gaynor`: https://github.com/alex
 
+Roadmap
+-------
+
+* Overhaul and expand documentation
+* Overhaul and expand test suite
+* Refactor generic class view (look into pagination of ListView)
+* Allow integration of django-floppyforms
+* Allow integration of django-crispy-forms
+* Allow filters on non-required fields with choices to provide
+  option of filtering the records that are unset. (i.e. FK is null)
+* Allow abstraction of ordering values used to avoid passing internal
+  information in GET params (i.e. ``user__username``)
+* Look into adapting ``LinkWidget`` and overall behavior to support
+  filtering like `django-easyfilters`_ or maybe drop the widget?
+
+.. _`http://pypi.python.org/pypi/django-easyfilters`
+
 
 Resources
 ---------

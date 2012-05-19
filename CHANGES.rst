@@ -41,7 +41,7 @@ Version 0.1 (Unreleased)
     provide 'pretty' options for lookup types (`Tino de Bruijn`_).
 
 
-.. _django-filter: http://pypi.python.org/pypi/django-filter
+.. _`django-filter`: https://github.com/alex/django-filter
 .. _`django-qfilters`: https://github.com/subsume/django-qfilters
 .. _`Steve Yeago`: https://github.com/subsume
 .. _`Alisue`: https://github.com/lambdaalisue
