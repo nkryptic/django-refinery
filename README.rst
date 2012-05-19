@@ -54,7 +54,7 @@ Requirements
 ------------
 
 * Python 2.5+
-* Django 1.2+
+* Django 1.3+
 
 
 Installation
@@ -89,7 +89,7 @@ documentation improvements, use the `issue tracker`_.  If you want to
 fix it yourself, thank you!  `Fork the project`_, make changes and
 `send a pull request`_.  Please do create an issue to discuss your plans.
 
-.. `issue tracker`_: http://github.com/nkryptic/django-refinery/issues
+.. _`issue tracker`: http://github.com/nkryptic/django-refinery/issues
 .. _`Fork the project`: http://help.github.com/fork-a-repo
 .. _`send a pull request`: http://help.github.com/send-pull-requests/
 

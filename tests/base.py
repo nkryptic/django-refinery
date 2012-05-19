@@ -4,21 +4,10 @@ import difflib
 import HTMLParser as _HTMLParser
 from HTMLParser import HTMLParseError
 from django.test import TestCase
-# from django.utils.unittest.util import safe_repr
+from django.utils.unittest.util import safe_repr
 from django.utils.encoding import force_unicode
 
 WHITESPACE = re.compile('\s+')
-
-# Django <= 1.3 doesn't have this
-_MAX_LENGTH = 80
-def safe_repr(obj, short=False):
-    try:
-        result = repr(obj)
-    except Exception:
-        result = object.__repr__(obj)
-    if not short or len(result) < _MAX_LENGTH:
-        return result
-    return result[:_MAX_LENGTH] + ' [truncated]...'
 
 
 class HTMLParser(_HTMLParser.HTMLParser):
