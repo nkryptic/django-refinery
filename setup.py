@@ -19,7 +19,7 @@ install_requires = []
 
 setup(
     name='django-refinery',
-    version='0.1',
+    version='0.2dev',
     description='Django-refinery is a reusable Django application for allowing users to filter queryset dynamically.',
     long_description=open('README.rst').read(),
     classifiers=[

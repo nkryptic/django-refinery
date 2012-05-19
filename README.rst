@@ -1,6 +1,9 @@
 django-refinery
 ===============
 
+.. image:: https://secure.travis-ci.org/nkryptic/django-refinery.png?branch=master
+   :target: http://travis-ci.org/nkryptic/django-refinery
+
 Allows users to filter down a queryset based on a model's fields, similar to
 the Django admin's ``list_filter`` interface.  A ``FilterTool`` helper class
 is provided, which will (by default) map filters to model fields and create
