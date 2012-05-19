@@ -29,8 +29,6 @@ def object_filtered_list(request, model=None, queryset=None, template_name=None,
     return render_to_response(template_name, c)
 
 
-######
-
 from django.http import Http404
 from django.views.generic import View
 from django.views.generic.list import MultipleObjectMixin
@@ -81,4 +79,5 @@ class FilteredListView(MultipleObjectTemplateResponseMixin, BaseFilteredListView
     `self.queryset` can actually be any iterable of items, not just a queryset.
     """
     template_name_suffix = '_filtered_list'
+
 
