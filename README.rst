@@ -62,6 +62,11 @@ Installation
 * ``pip install -U django-refinery``
 * Add ``refinery`` to your ``INSTALLED_APPS``
 
+To install the `in-development version`_ of django-refinery, run ``pip
+install django-refinery==dev``.
+
+.. _`in-development version`: https://github.com/nkryptic/django-refinery/tarball/master#egg=django-refinery-dev
+
 
 Documentation
 -------------
