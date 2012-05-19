@@ -1,19 +1,17 @@
 django-refinery
 ===============
 
+.. image:: https://secure.travis-ci.org/nkryptic/django-refinery.png?branch=master
+   :target: http://travis-ci.org/nkryptic/django-refinery
+
 Allows users to filter down a queryset based on a model's fields, similar to
 the Django admin's ``list_filter`` interface.  A ``FilterTool`` helper class
 is provided, which will (by default) map filters to model fields and create
 a form for queryset manipulation.  The helper class supports an interface 
 which will feel familiar to anyone who's used a Django ``ModelForm``.
 
-:Author: `Jacob Radford`_
+:Author: `Jacob Radford <https://github.com/nkryptic>`_
 :Licence: BSD
-:Development Status: |travis-ci-status|
-
-.. _`Jacob Radford`: https://github.com/nkryptic
-.. |travis-ci-status| image:: https://secure.travis-ci.org/nkryptic/django-refinery.png?branch=master
-                      :target: http://travis-ci.org/nkryptic/django-refinery
 
 
 Example usage
@@ -50,6 +48,7 @@ And then in your template::
 
 For more complex usage or custom needs, refer to the project documentation.
 
+
 Requirements
 ------------
 
@@ -68,7 +67,7 @@ Documentation
 -------------
 
 See the ``docs`` folder or `read it on readthedocs`_ for expanded
-information on::
+information on:
 
 * Usage examples
 * Contributing
@@ -99,10 +98,11 @@ Background
 
 Django-refinery is based on `django-filter`_, an application created
 by `Alex Gaynor`_.  For a complete project history and list of contributors,
-see the `django-refinery documentation <http://django-refinery.rtfd.org>`_.
+see the project documentation.
 
 .. _`django-filter`: https://github.com/alex/django-filter
 .. _`Alex Gaynor`: https://github.com/alex
+
 
 Resources
 ---------
