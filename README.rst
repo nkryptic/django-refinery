@@ -118,7 +118,7 @@ Roadmap
 * Look into adapting ``LinkWidget`` and overall behavior to support
   filtering like `django-easyfilters`_ or maybe drop the widget?
 
-.. _`http://pypi.python.org/pypi/django-easyfilters`
+.. _`django-easyfilters`: http://pypi.python.org/pypi/django-easyfilters
 
 
 Resources
