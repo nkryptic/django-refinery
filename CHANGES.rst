@@ -1,4 +1,4 @@
-Version 0.1 (Unreleased)
+Version 0.1 (2012-05-19)
 ------------------------
 
 * Initial version of django-refinery (extracted from django-filter_ v0.5.3).
