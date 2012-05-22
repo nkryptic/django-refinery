@@ -9,6 +9,12 @@ except ImportError:
 
 from setuptools import setup, find_packages
 
+long_description = open('README.rst').read() + """
+
+Changelog
+=========
+
+""" + open('CHANGES.rst').read()
 tests_require = [
     'Django>=1.3,<1.5',
     'nose',
@@ -21,7 +27,7 @@ setup(
     name='django-refinery',
     version='0.2dev',
     description='Django-refinery is a reusable Django application for allowing users to filter queryset dynamically.',
-    long_description=open('README.rst').read(),
+    long_description=long_description,
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Environment :: Web Environment',

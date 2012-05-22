@@ -227,6 +227,7 @@ class DateRangeFilter(ChoiceFilter):
 class AllValuesFilter(ChoiceFilter):
     @property
     def field(self):
+        # TODO: self.model is only used here and is assigned from the filtertool class
         qs = self.model._default_manager.distinct().order_by(self.name).values_list(self.name, flat=True)
         self.extra['choices'] = [(o, o) for o in qs]
         return super(AllValuesFilter, self).field

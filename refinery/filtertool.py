@@ -216,6 +216,7 @@ class BaseFilterTool(object):
         self.is_bound = data is not None
         self.data = data or {}
         if queryset is None:
+            # TODO: what if self._meta.model is None???
             queryset = self._meta.model._default_manager.all()
         self.queryset = queryset
         self.form_prefix = prefix

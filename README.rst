@@ -1,21 +1,22 @@
-django-refinery
-===============
+===========================
+django-refinery |ci-status|
+===========================
 
-.. image:: https://secure.travis-ci.org/nkryptic/django-refinery.png?branch=master
-   :target: http://travis-ci.org/nkryptic/django-refinery
+.. |ci-status| image:: https://secure.travis-ci.org/nkryptic/django-refinery.png?branch=master
+               :target: http://travis-ci.org/nkryptic/django-refinery
 
-Allows users to filter down a queryset based on a model's fields, similar to
-the Django admin's ``list_filter`` interface.  A ``FilterTool`` helper class
-is provided, which will (by default) map filters to model fields and create
-a form for queryset manipulation.  The helper class supports an interface 
-which will feel familiar to anyone who's used a Django ``ModelForm``.
+Allows users to filter down a queryset based on a model's fields, similar
+to the Django admin's ``list_filter`` interface.  A ``FilterTool`` helper
+class is provided, which will (by default) map filters to model fields and
+create a form for queryset manipulation.  The helper class interface will
+feel familiar to anyone who's used a Django ``ModelForm``.
 
 :Author: `Jacob Radford <https://github.com/nkryptic>`_
 :Licence: BSD
 
 
 Example usage
--------------
+=============
 
 Given a ``Product`` model you could create a ``FilterTool`` for it with::
 
@@ -50,14 +51,14 @@ For more complex usage or custom needs, refer to the project documentation.
 
 
 Requirements
-------------
+============
 
 * Python 2.5+
 * Django 1.3+
 
 
 Installation
-------------
+============
 
 * ``pip install -U django-refinery``
 * Add ``refinery`` to your ``INSTALLED_APPS``
@@ -69,7 +70,7 @@ install django-refinery==dev``.
 
 
 Documentation
--------------
+=============
 
 See the ``docs`` folder or `read it on readthedocs`_ for expanded
 information on:
@@ -85,7 +86,7 @@ information on:
 
 
 Bugs
-----
+====
 
 If you want to help out with the development of django-refinery, by
 posting detailed bug reports, proposing new features, or suggesting
@@ -99,7 +100,7 @@ fix it yourself, thank you!  `Fork the project`_, make changes and
 
 
 Background
-----------
+==========
 
 Django-refinery is based on `django-filter`_, an application created
 by `Alex Gaynor`_.  For a complete project history and list of contributors,
@@ -109,7 +110,7 @@ see the project documentation.
 .. _`Alex Gaynor`: https://github.com/alex
 
 Roadmap
--------
+=======
 
 * Overhaul and expand documentation
 * Overhaul and expand test suite
@@ -127,12 +128,10 @@ Roadmap
 
 
 Resources
----------
+=========
 
 * `Documentation <http://django-refinery.rtfd.org/>`_
 * `Bug Tracker <http://github.com/nkryptic/django-refinery/issues>`_
 * `Code <http://github.com/nkryptic/django-refinery>`_
 * `Continuous Integration <http://travis-ci.org/nkryptic/django-refinery>`_
-
-
 

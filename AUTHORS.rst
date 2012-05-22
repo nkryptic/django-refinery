@@ -1,4 +1,4 @@
-The django-refinery package was written by `Jacob Radford`_ and
+The django-refinery package was started by `Jacob Radford`_ and
 based on the `django-filter <https://github.com/alex/django-filter>`_
 project by `Alex Gaynor <https://github.com/alex>`_.
 
