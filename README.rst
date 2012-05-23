@@ -123,6 +123,7 @@ Roadmap
   information in GET params (i.e. ``user__username``)
 * Look into adapting ``LinkWidget`` and overall behavior to support
   filtering like `django-easyfilters`_ or maybe drop the widget?
+* Allow multiple ordering fields to be used at the same time
 
 .. _`django-easyfilters`: http://pypi.python.org/pypi/django-easyfilters
 

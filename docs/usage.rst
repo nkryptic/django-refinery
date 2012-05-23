@@ -1,5 +1,6 @@
+=====================
 Using django-refinery
----------------------
+=====================
 
 Django-refinery provides a simple way to filter down a queryset based on
 parameters a user provides.  Say we have a ``Product`` model and we want to let

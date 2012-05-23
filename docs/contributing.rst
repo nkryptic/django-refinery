@@ -1,3 +1,7 @@
+============
+Contributing
+============
+
 Running the django-refinery tests
 =================================
 

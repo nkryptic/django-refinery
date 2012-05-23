@@ -1,5 +1,17 @@
+===================================
 Integrating with other applications
------------------------------------
+===================================
+
+Django-floppyforms
+==================
+
+.. note:: COMING SOON
+
+Django-crispy-forms
+===================
+
+.. note:: COMING SOON
+
 
 Django-pagination
 =================
