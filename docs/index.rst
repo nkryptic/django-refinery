@@ -44,7 +44,7 @@ Developer Guide
    
    contributing
 
-.. contributing 1
+.. contributing 1 (django-crispy-forms)
    - setup
    -- fork
    -- clone
@@ -57,11 +57,11 @@ Developer Guide
    -- don't mix code changes/code cleanup/doc changes
    -- keep pull request simple/single issue
    -- keep code simple
-   contributing 2
+   contributing 2 (raven)
    - setting up an environment
    - running the test suite
    - contributing back code
-   contributing 3
+   contributing 3 (django-compressor)
    - Community
    - In a nutshell
    - Contributing Code

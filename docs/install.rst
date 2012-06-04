@@ -37,13 +37,6 @@ Then install the package by running the setup script::
 Configuring Django
 ==================
 
-Add ``crispy_forms`` to your ``INSTALLED_APPS`` in settings.py::
-
-    INSTALLED_APPS = (
-        ...
-        'crispy_forms',
-    )
-
 After installing django-refinery, add the ``refinery`` application to
 your ``INSTALLED_APPS`` in the settings.py of your project::
 

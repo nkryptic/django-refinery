@@ -27,8 +27,8 @@ price or the release_date.  We create a ``FilterTool`` for this::
             fields = ['price', 'release_date']
 
 
-As you can see this uses a very similar API to Django's ``ModelForm``.  Just
-like with a ``ModelForm`` we can also overide filters, or add new ones using a
+As you can see, this uses a very similar API to Django's ``ModelForm``.  Like
+with a ``ModelForm`` we can also overide filters, or add new ones using a
 declarative syntax::
 
     import refinery
@@ -65,7 +65,7 @@ in ``Filter.extra``, so it's possible to overide the constructor of a
         def __init__(self, *args, **kwargs):
             super(ProductFilterTool, self).__init__(*args, **kwargs)
             self.filters['manufacturer'].extra.update(
-                {'empty_label': u'All Manufacturers'})
+                {'empty_label': u'Any Manufacturer'})
 
 
 Now we need to write a view::
