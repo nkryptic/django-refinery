@@ -15,7 +15,7 @@ __all__ = [
     'OpenRangeNumericFilter', 'OpenRangeDateFilter', 'OpenRangeTimeFilter',
 ]
 
-LOOKUP_TYPES = sorted(QUERY_TERMS.keys())
+LOOKUP_TYPES = sorted(QUERY_TERMS)
 
 
 class Filter(object):
