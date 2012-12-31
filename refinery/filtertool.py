@@ -6,7 +6,12 @@ from django.db import models
 from django.db.models import Q
 from django.db.models.fields import FieldDoesNotExist
 from django.db.models.related import RelatedObject
-from django.db.models.sql.constants import QUERY_TERMS, LOOKUP_SEP
+try:
+    from django.db.models.constants import LOOKUP_SEP
+except ImportError:
+    # Django < 1.5
+    from django.db.models.sql.constants import LOOKUP_SEP
+from django.db.models.sql.constants import QUERY_TERMS
 from django.utils.datastructures import SortedDict
 from django.utils.text import capfirst
 
@@ -70,7 +75,7 @@ def filters_for_model(model, fields=None, exclude=None, filter_for_field=None):
     for f in fields:
         if exclude is not None and f in exclude:
             continue
-        if f.split(LOOKUP_SEP)[-1] in QUERY_TERMS.keys():
+        if f.split(LOOKUP_SEP)[-1] in QUERY_TERMS:
             lookup_type = f.split(LOOKUP_SEP)[-1]
             f = LOOKUP_SEP.join(f.split(LOOKUP_SEP)[:-1])
         else:
