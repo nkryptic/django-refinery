@@ -14,3 +14,7 @@ install:
 script:
   - python runtests.py
   # - python setup.py test
+matrix:
+  exclude:
+    - python: 2.5
+      env: DJANGO_VERSION='https://www.djangoproject.com/download/1.5b1/tarball/'
