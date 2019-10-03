@@ -1,4 +1,4 @@
-django==1.4
+django==1.11.23
 nose
 django-nose
 flexmock
